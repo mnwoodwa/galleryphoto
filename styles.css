@@ -3,6 +3,8 @@ html {
     font-family: Arial, Helvetica, sans-serif;
 }
 body {
+    display: grid;
+    grid-template-columns: 1fr;
     width: 485px;
     margin: 0 auto;
 }
@@ -59,6 +61,8 @@ main {
 
 #gallery {
     background-color: #ffffff;
+    display: grid;
+    grid-template-columns: 1fr;
 }
 
 h2 {
@@ -80,8 +84,30 @@ p {
     text-align: center;
 }
 
+figcaption {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.top {
+    position: absolute;
+}
+
+.bottom {
+    position: absolute;
+}
+
+.black {
+    color: #000000;
+}
+
+.white {
+    color: #ffffff;
+}
+
 img {
-    display: block;
+    display: grid;
+    grid-template-columns: 1fr;
     margin-left: auto;
     margin-right: auto;
 }
@@ -102,4 +128,16 @@ input::placeholder {
 footer {
  color: #ffffff;
  text-align: center;
+}
+
+@media screen and (min-width: 880px) {
+    #gallery{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1330px) {
+    #gallery {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
